@@ -1,0 +1,242 @@
+.memberships-page {
+    min-height: 100vh;
+    background: #f5f5f5;
+    /* Light background like reference */
+    color: #333;
+}
+
+/* Hero Section */
+.membership-hero {
+    height: 60vh;
+    min-height: 400px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -80px;
+    /* Counteract navbar padding if transparent */
+    padding-top: 80px;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    color: white;
+}
+
+.hero-content h1 {
+    font-size: clamp(3rem, 6vw, 5rem);
+    font-weight: 800;
+    letter-spacing: 0.05em;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+.hero-content p {
+    font-size: 1.25rem;
+    font-weight: 300;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+}
+
+/* Plans Section */
+.plans-section {
+    padding: 5rem 0;
+    background: #fff;
+}
+
+.section-header {
+    margin-bottom: 4rem;
+}
+
+.section-header h2 {
+    font-size: 2.5rem;
+    color: #000;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-top: 0.5rem;
+}
+
+.section-subtitle {
+    color: var(--color-primary);
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+/* Cards Grid */
+.memberships-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.membership-card {
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    padding: 0;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.membership-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.membership-card.featured {
+    border: 2px solid var(--color-primary);
+}
+
+.featured-badge {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: var(--color-primary);
+    color: #000;
+    padding: 0.5rem 1.5rem;
+    font-weight: 700;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    border-radius: 20px;
+    z-index: 10;
+}
+
+.membership-image {
+    height: 200px;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+
+.image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4));
+}
+
+.membership-card:hover .membership-image {
+    transform: scale(1.02);
+    transition: transform 0.5s ease;
+}
+
+.card-header {
+    padding: 2.5rem 2rem;
+    display:  flex;
+    flex-direction: column;
+    text-align: center;
+    border-bottom: 1px solid #f0f0f0;
+    background: #fafafa;
+}
+
+.card-header h3 {
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    color: #000;
+    text-transform: uppercase;
+}
+
+.price-container {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    margin-bottom: 1rem;
+    color: var(--color-primary);
+}
+
+.currency {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-right: 4px;
+}
+
+.amount {
+    font-size: 3rem;
+    font-weight: 500;
+    line-height: 1;
+}
+
+.period {
+    color: #666;
+    margin-left: 4px;
+}
+
+.description {
+    color: #666;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.card-features {
+    padding: 2rem;
+    flex-grow: 1;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    color: #444;
+}
+
+.check-icon {
+    color: var(--color-primary);
+    margin-right: 1rem;
+    flex-shrink: 0;
+}
+
+.card-footer {
+    padding: 2rem;
+    border-top: 1px solid #f0f0f0;
+}
+
+.btn-outline {
+    background: transparent;
+    border: 2px solid #000;
+    color: #000;
+}
+
+.btn-outline:hover {
+    background: #000;
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+    .membership-hero {
+        height: 50vh;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .memberships-grid {
+        grid-template-columns: 1fr;
+        padding: 0 1rem;
+    }
+}
