@@ -117,7 +117,7 @@ const Memberships = () => {
                                 <div className="card-header">
                                     <h3>{membership?.name}</h3>
                                     <div className="price-container">
-                                        <span className="currency">THB</span>
+                                        <span className="currency">USD</span>
                                         <span className="amount">{membership?.price}</span>
                                         <span className="period">/mo</span>
                                     </div>
